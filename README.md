@@ -97,6 +97,29 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 );
 ```
 
+## Todo
+
+### Components
+
+- [x] Button
+- [ ] Table with Table.Header, Table.Body, Table.Row, Table.Head and Table.Data
+- [ ] InputText
+- [ ] Select with Select.Option
+- [ ] Checkbox
+- [ ] Badge
+- [ ] Loader
+- [ ] Progress
+- [ ] Dropdown with Dropdown.Item
+- [ ] Pagination
+
+### Implementation packages
+
+The basic components should be finished in order to start the implementations.
+
+- [ ] Bootstrap
+- [ ] Material-UI
+- [ ] Ant Design
+
 ## Contribute
 
 We would love for you to contribute to our component library. Here are some ways to contribute:

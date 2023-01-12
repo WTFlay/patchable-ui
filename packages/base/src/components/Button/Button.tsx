@@ -1,5 +1,5 @@
 import React from "react";
-import { patchable } from "../patch/patchable";
+import { patchable } from "../../patch";
 
 export interface ButtonProps {
   className?: string;

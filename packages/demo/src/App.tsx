@@ -1,34 +1,31 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Button } from "@patchable-ui/base";
+import { CustomButton, patchUi } from "./patcher";
+import { BootstrapButton, patchWithBootstrap } from "@patchable-ui/bootstrap";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [, setUi] = useState("default");
+
+  const useCustomUi = () => {
+    patchUi();
+    setUi("custom");
+  };
+
+  const useBootstrap = () => {
+    patchWithBootstrap();
+    setUi("bootstrap");
+  };
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button
-          label={`count is ${count}`}
-          onClick={() => setCount((count) => count + 1)}
-        />
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <CustomButton label="use custom button" onClick={useCustomUi} />
+      <BootstrapButton label="use bootstrap ui" onClick={useBootstrap} />
+      <Button
+        label={`count is ${count}`}
+        onClick={() => setCount((count) => count + 1)}
+      />
     </div>
   );
 }

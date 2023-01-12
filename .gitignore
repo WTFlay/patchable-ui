@@ -1,4 +1,6 @@
 node_modules
 .yarn
+.yarnrc
 .yarnrc.yml
 yarn.lock
+dist

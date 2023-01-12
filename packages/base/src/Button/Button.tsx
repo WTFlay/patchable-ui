@@ -1,10 +1,10 @@
 import React from "react";
 
 export interface ButtonProps {
-  className: string;
+  className?: string;
   label: string;
-  onClick: () => void;
-  type: "submit" | "button";
+  onClick?: () => void;
+  type?: "submit" | "button";
 }
 
 export const Button = (props: ButtonProps) => (
